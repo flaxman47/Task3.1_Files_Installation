@@ -1,5 +1,3 @@
-package Task3_1_ProgramInstallation.src;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -35,8 +33,6 @@ public class Main {
         createNewFile("C:/Java/Task3.1_Files_Installation/Games/temp",
                 "temp.txt", sbLog);
 
-
-
         try (FileWriter logFile = new FileWriter(
                 "C:/Java/Task3.1_Files_Installation/Games/temp/temp.txt", false)) {
             logFile.write(sbLog.toString());
@@ -44,7 +40,6 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private static void createNewFile(String dirPath, StringBuilder sbLog ) {
@@ -53,9 +48,7 @@ public class Main {
         if (dir.mkdir()) {
             sbLog.append("Congratulations! Catalog '"+ dirPath +"' successfully created\n");
         }
-
     }
-
 
     private static void createNewFile(String dirPath, String fileName, StringBuilder sbLog) {
 
@@ -68,7 +61,5 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-
 }
